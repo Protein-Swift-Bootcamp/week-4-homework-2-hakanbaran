@@ -19,6 +19,18 @@ class FirstVC: UIViewController {
         tableView.register(.init(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCellID")
         tableView.separatorStyle = .none
         
+        getData()
+    }
+    
+    
+    func getData() {
+        let url = URL(string: "https://api.themoviedb.org/3/movie/top_rated?api_key=3eb740bc8fc93686e023441eb0718ab1&language=en-US&page=1")!
+        
+        WebService().downloadMovie(url: url) { movies in
+            if let movies = movies {
+                print(movies)
+            }
+        }
     }
 }
 
