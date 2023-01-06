@@ -9,9 +9,10 @@ import Foundation
 
 struct  SecondVCViewModel {
     
-    let movieName: String
-    let movieOverView: String
-    let imageUrl: String
-    let date: String
+    let movieName: String?
+    let movieOverView: String?
+    let imageUrl: String?
+    let date: String?
+    let youtubeView: VideoElement
     
 }

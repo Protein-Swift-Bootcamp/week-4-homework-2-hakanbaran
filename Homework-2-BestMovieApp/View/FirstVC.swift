@@ -89,17 +89,17 @@ extension FirstVC: UITableViewDataSource {
         let movieDate = self.movieListViewModel.movieAtIndex(indexPath.row).movieDate
         
         
-        let viewModel = SecondVCViewModel(movieName: movieViewModelName, movieOverView: movieViewModelOverview, imageUrl: movieImageUrl, date: movieDate)
-        self.openResultController(viewModel)
-        
-        
-        
-        YoutubeApiCaller.shared.getMovieToYoutube(with: movieViewModelName + "trailer") {  result in
+        YoutubeApiCaller.shared.getMovieToYoutube(with: movieViewModelName + "trailer") { [weak self] result in
             switch result {
             case .success(let videoElement):
                 
                 print(videoElement)
                 
+                DispatchQueue.main.async {
+                    let viewModel = SecondVCViewModel(movieName: movieViewModelName, movieOverView: movieViewModelOverview, imageUrl: movieImageUrl, date: movieDate, youtubeView: videoElement )
+                    self?.openResultController(viewModel)
+                    
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }
