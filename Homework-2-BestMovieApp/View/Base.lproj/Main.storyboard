@@ -97,6 +97,7 @@
                         <outlet property="secondMovieDate" destination="fc1-89-b74" id="aJl-vv-5Un"/>
                         <outlet property="secondMovieName" destination="VdH-3G-oHD" id="oe6-Ko-7hI"/>
                         <outlet property="secondMovieOverview" destination="8fD-d8-4E0" id="a1p-nM-d4c"/>
+                        <outlet property="webView" destination="B9l-Eb-9qq" id="sho-wn-yOh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mav-xi-f2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

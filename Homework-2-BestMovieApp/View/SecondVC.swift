@@ -16,6 +16,7 @@ class SecondVC: UIViewController {
     @IBOutlet weak var secondMovieDate: UILabel!
     @IBOutlet weak var secondMovieOverview: UILabel!
     
+    @IBOutlet weak var webView: WKWebView!
     var viewModel : SecondVCViewModel?
     
     
@@ -33,6 +34,16 @@ class SecondVC: UIViewController {
         
         let url = viewModel?.imageUrl
         secondImageView.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500/\(url ?? "")"))
+        
+        let youtubeVideoID = viewModel?.youtubeView.id.videoId
+        
+        
+        
+        guard let youtubeUrl = URL(string: "https://www.youtube.com/embed/\(youtubeVideoID ?? "")") else {
+            return
+        }
+        
+        webView.load(URLRequest(url: youtubeUrl))
         
         
     }
