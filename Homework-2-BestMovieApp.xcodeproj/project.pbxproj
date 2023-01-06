@@ -13,6 +13,8 @@
 		D472539A2968538800A560D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47253982968538800A560D9 /* Main.storyboard */; };
 		D472539C2968538900A560D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D472539B2968538900A560D9 /* Assets.xcassets */; };
 		D472539F2968538900A560D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D472539D2968538900A560D9 /* LaunchScreen.storyboard */; };
+		D47253A82968AB2D00A560D9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47253A62968AB2D00A560D9 /* TableViewCell.swift */; };
+		D47253A92968AB2D00A560D9 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D47253A72968AB2D00A560D9 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D472539B2968538900A560D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D472539E2968538900A560D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D47253A02968538900A560D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D47253A62968AB2D00A560D9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D47253A72968AB2D00A560D9 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				D472539B2968538900A560D9 /* Assets.xcassets */,
 				D472539D2968538900A560D9 /* LaunchScreen.storyboard */,
 				D47253A02968538900A560D9 /* Info.plist */,
+				D47253A62968AB2D00A560D9 /* TableViewCell.swift */,
+				D47253A72968AB2D00A560D9 /* TableViewCell.xib */,
 			);
 			path = "Homework-2-BestMovieApp";
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D472539F2968538900A560D9 /* LaunchScreen.storyboard in Resources */,
+				D47253A92968AB2D00A560D9 /* TableViewCell.xib in Resources */,
 				D472539C2968538900A560D9 /* Assets.xcassets in Resources */,
 				D472539A2968538800A560D9 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D47253972968538800A560D9 /* FirstVC.swift in Sources */,
+				D47253A82968AB2D00A560D9 /* TableViewCell.swift in Sources */,
 				D47253932968538800A560D9 /* AppDelegate.swift in Sources */,
 				D47253952968538800A560D9 /* SceneDelegate.swift in Sources */,
 			);
