@@ -23,6 +23,8 @@ class FirstVC: UIViewController {
         tableView.register(.init(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCellID")
         tableView.separatorStyle = .none
         
+        navigationController?.navigationBar.topItem?.title = "BEST MOVİES"
+        
         getData()
     }
     
