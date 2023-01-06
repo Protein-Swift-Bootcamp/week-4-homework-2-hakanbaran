@@ -93,6 +93,19 @@ extension FirstVC: UITableViewDataSource {
         self.openResultController(viewModel)
         
         
+        
+        YoutubeApiCaller.shared.getMovieToYoutube(with: movieViewModelName + "trailer") {  result in
+            switch result {
+            case .success(let videoElement):
+                
+                print(videoElement)
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        
     }
     
     func openResultController(_ viewModel: SecondVCViewModel) {

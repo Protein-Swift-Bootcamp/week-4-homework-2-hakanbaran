@@ -31,6 +31,9 @@ class SecondVC: UIViewController {
         let yearResult = "(\(year))"
         secondMovieDate.text = yearResult
         
+        let url = viewModel?.imageUrl
+        secondImageView.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500/\(url ?? "")"))
+        
         
     }
     
