@@ -79,5 +79,20 @@ extension FirstVC: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        let movieViewModelName = self.movieListViewModel.movieAtIndex(indexPath.row).name
+        let movieViewModelOverview = self.movieListViewModel.movieAtIndex(indexPath.row).movieOverview
+        let movieImageUrl = self.movieListViewModel.movieAtIndex(indexPath.row).poster
+        let movieDate = self.movieListViewModel.movieAtIndex(indexPath.row).movieDate
+        
+        
+        let viewModel = SecondVCViewModel(movieName: movieViewModelName, movieOverView: movieViewModelOverview, imageUrl: movieImageUrl, date: movieDate)
+        
+        
+    }
+    
 }
 
