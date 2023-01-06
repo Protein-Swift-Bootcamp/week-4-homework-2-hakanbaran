@@ -90,9 +90,22 @@ extension FirstVC: UITableViewDataSource {
         
         
         let viewModel = SecondVCViewModel(movieName: movieViewModelName, movieOverView: movieViewModelOverview, imageUrl: movieImageUrl, date: movieDate)
+        self.openResultController(viewModel)
         
         
     }
+    
+    func openResultController(_ viewModel: SecondVCViewModel) {
+            let controller = storyboard?.instantiateViewController(identifier: "SecondVC", creator: { coder in
+                
+                let vc = SecondVC(coder: coder)
+                vc?.viewModel = viewModel
+                return vc
+            })
+            
+            guard let controller = controller else { return }
+            navigationController?.pushViewController(controller, animated: true)
+        }
     
 }
 

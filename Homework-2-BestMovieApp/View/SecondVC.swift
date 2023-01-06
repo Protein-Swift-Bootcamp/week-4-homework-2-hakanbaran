@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SDWebImage
+import WebKit
 
 class SecondVC: UIViewController {
 

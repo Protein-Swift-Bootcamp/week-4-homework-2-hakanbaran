@@ -42,7 +42,7 @@
         <!--SecondVC-->
         <scene sceneID="35w-be-boh">
             <objects>
-                <viewController id="jQU-5T-8X2" customClass="SecondVC" customModule="Homework_2_BestMovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" id="jQU-5T-8X2" customClass="SecondVC" customModule="Homework_2_BestMovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fja-wZ-9ZK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
