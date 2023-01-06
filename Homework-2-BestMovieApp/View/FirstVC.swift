@@ -16,6 +16,9 @@ class FirstVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.register(.init(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCellID")
+        tableView.separatorStyle = .none
+        
     }
 }
 
@@ -28,8 +31,9 @@ extension FirstVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Test"
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellID", for: indexPath) as! TableViewCell
         return cell
     }
 }
