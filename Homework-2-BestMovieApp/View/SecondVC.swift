@@ -14,10 +14,21 @@ class SecondVC: UIViewController {
     @IBOutlet weak var secondMovieDate: UILabel!
     @IBOutlet weak var secondMovieOverview: UILabel!
     
+    var viewModel : SecondVCViewModel?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        secondMovieName.text = viewModel?.movieName
+        secondMovieOverview.text = viewModel?.movieOverView
+        
+        let date = viewModel?.date
+        let index = date!.firstIndex(of: "-") ?? date!.endIndex
+        let year = date![..<index]
+        let yearResult = "(\(year))"
+        secondMovieDate.text = yearResult
+        
         
     }
     
