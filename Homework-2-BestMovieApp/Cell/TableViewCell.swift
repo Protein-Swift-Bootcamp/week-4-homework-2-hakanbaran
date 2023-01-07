@@ -19,7 +19,10 @@ class TableViewCell: UITableViewCell {
         
         cellImageView.image = UIImage(named: "testPoster")
         
-        
+        cellImageView.layer.cornerRadius = 10
+        cellImageView.layer.borderWidth = 1
+        cellImageView.layer.borderColor = UIColor.white.cgColor
+        cellImageView.clipsToBounds = true
         
         
     }
