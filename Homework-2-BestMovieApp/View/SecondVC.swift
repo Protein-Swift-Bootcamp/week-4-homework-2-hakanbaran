@@ -39,6 +39,16 @@ class SecondVC: UIViewController {
         let seconds = 3.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             self.secondVCLoadData()
+            
+            self.secondImageView.isHidden = false
+            self.secondMovieName.isHidden = false
+            self.secondMovieDate.isHidden = false
+            self.secondMovieOverview.isHidden = false
+            self.webView.isHidden = false
+            self.overviewTitleLabel.isHidden = false
+            
+            self.spinner.stopAnimating()
+            self.spinner.isHidden = true
         }
         
         
